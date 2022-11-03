@@ -30,6 +30,13 @@ $(".-carousel").slick({
 });
 
 
+$(document).ready(()=>{
+    $('.gapro-slideshow').slick({
+        prevArrow: $('.gapro-btn-left'),
+        nextArrow: $('.gapro-btn-right'),
+    });
+})
+
 let gamproCarousel = ()=>{
     const gaproButtonLeft = $('.gapro-btn-left');
     const gaproButtonRight = $('.gapro-btn-right');

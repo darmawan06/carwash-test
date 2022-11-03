@@ -7,8 +7,8 @@
     --white: #FFFFFF;
     --grey: #3A3939 ;
 
-    --font-1: 'Zen Antique', serif;
-    --font-2: 'Source Sans Pro', sans-serif;
+    --font-1: 'Montserrat', sans-serif;
+    --font-2: 'Open Sans', sans-serif;
 }
 
 /* Font Declaration */
@@ -45,18 +45,17 @@
 .text1 {
     font-size: 16px;
     line-height: normal;
+    font-weight: 300;
     font-family: var(--font-2);
 }
 
 .text2 {
     font-size: 12px;
     line-height: normal;
+    font-weight: 300;
     font-family: var(--font-2);
 }
 
-.font-32{
-    font-size: 32px !important;
-}
 
 
 /* End Font Declaration */
@@ -120,26 +119,20 @@
 .button-layout {
     background-color: var(--primary);
     color: var(--white);
-    width: 225px;
-    height: 42px;
-    border: 0;
+    width: 192px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
 }
+
 
 /* End Button Declaration */
 
 /* Utils */
-.fw-1000{
-    font-weight: 1000;
+ul{
+    padding: 0;
+    margin: 0;
 }
-
-.fw-600{
-    font-weight: 600;
-}
-
-.fw-300{
-    font-weight: 300;
-}
-
 
 /* End Utils */
 
@@ -163,21 +156,29 @@
 }
 
 .navbar-btn-layout{
-    width: 145px;
+    width: 149px;
+    padding: 8px 29px;
     background-color: var(--primary);
-    border-radius: 24px;
+    border-radius: 5px;
     color: var(--white);
     font-family: var(--font-1);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    border-radius: 8px;
+    font-size: 16px;
 }
 
 .navbar-btn-layout:hover{
     color: white;
 }
-
+.navbar-nav{
+    padding: 0 !important;
+}
+.navbar-nav .nav-item{
+    margin: 20px 23px;
+}
+.navbar-brand-img{
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
 /* End Navbar */
 
 /* Header */
@@ -185,7 +186,7 @@
 
 .page-header {
     height: 552px;
-    margin-top: calc(62px + 32px);
+    margin-top: 75px;
     background-color: var(--primary);
     background-image: url('../img/header-img.jpg');
     background-position: center;
@@ -214,14 +215,14 @@
 }
 
 .page-header .header-title div.container div .header-desc{
-    width: 753px;
     margin-bottom: 27px;
 }
 
-.page-header .header-title div.container div .header-btn{
+.page-header .header-title div.container div .header-btn a{
+    padding: 8px 36px;
     color: var(--white);
 }
-.page-header .header-title div.container div .header-btn:hover{
+.page-header .header-title div.container div .header-btn a:hover{
     color: var(--white);
     text-decoration: none;
 }
@@ -238,6 +239,7 @@
 
 #keunggulanPerusahaan .container .keper-desc{
     width: 848px;
+    margin: 32px 0 38px 0;
 }
 
 #keunggulanPerusahaan .container .keper-list{
@@ -248,7 +250,8 @@
     max-width: 245px;
     height: 206px;
     background-color: var(--primary);
-    margin: auto auto 10px auto;
+    margin: auto auto 20px auto;
+    border-radius: 5px;
 
 }
 /* End Keunggulan Perusahaan - keper */
@@ -257,47 +260,50 @@
 /* Keunggulan Produk - kepro */
 #keunggulanProduk {
     margin-top: 48px;
-    height: 634px;
-    background-color: var(--primary);
 }
-#keunggulanProduk .kepro-title{
+.kepro-title{
     margin-top: 60px;
+    margin-bottom: 32px;
+    color: var(--primary);
 }
-#keunggulanProduk .kepro-list{
-    padding: 0;
-    height: 402px;
+.kepro-list{
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
 }
 #keunggulanProduk .kepro-list .kepro-item{
     list-style: none;
-    max-width: 214px;
-    height: 202px;
-    background-color: var(--white);
-    margin: auto auto;
-    border-radius: 10px;
-    box-shadow: 0px 14px 4px 0px rgba(0,0,0,0.25);
+    margin: 20px;
+    min-width: 180px;
+    height: 180px;
+    background-color: var(--primary);
+    border-radius: 5px;
 
 }
 
-#keunggulanProduk .kepro-desc{
-    max-width: 650px;
+#keunggulanProduk .kepro-list .kepro-item span{
+    margin-top: 20px;
 }
+
 /* End Keunggulan Produk - kepro */
 
 
 /* Gambar Proses - gapro */
 #gambarProses {
     margin-top: 48px;
-    min-height: 516px;
+    min-height: 472px;
+    background-color: var(--primary);
 }
 
 #gambarProses .gapro-title{
-    height: 96px;
+    margin-top: 20px;
 }
 
 #gambarProses .gapro-slideshow{
     width: 100%;
-    height: 410px;
-    border-radius: 14px 14px 0 0;
+    height: 307px;
+    margin: 32px 0 28px 0;
+    border-radius: 5px 5px 0 0;
     color: white;
 }
 
@@ -316,9 +322,10 @@
     border-radius: 14px 14px 0 0;
     color: white;
     z-index: 5;
+    object-fit: cover;
 }
 #gambarProses .gapro-slideshow .gapro-btn{
-    background-color: var(--white);
+    background-color: var(--primary);
     border: 0;
 }
 #gambarProses .gapro-slideshow .gapro-btn-left{
@@ -344,6 +351,19 @@
 #tentangKami .container{
     height: 596px;
 }
+
+.teka-logo{
+    height:408px;
+    border-radius: 5px;
+}
+.teka-desc{
+    padding: 0 37px;
+}
+
+.teka-logo img{
+    width: 180px;
+    height: 180px;
+}
 /* End Tentang Kami - teka */
 
 
@@ -356,12 +376,31 @@
     height: 500px;
 }
 
-.keha-img{
-    top: -50px;
+.keha-list{
+    margin-top: 44px;
 }
 
-.keha-img div{
-    background-size: cover;
+.keha-item{
+    list-style: none;
+    width: 324px;
+    min-height: 270px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.keha-item img{
+    width: 94px;
+    height: 94px;
+    margin-top: 18px;
+    object-fit: cover;
+}
+.keha-item h3{
+    margin: 16px 0;
+}
+
+.keha-item article{
+    padding: 16px;
+    font-weight: 200;
 }
 /* End Kenapa Harus Beli Kepada Kami - keha */
 
@@ -389,28 +428,45 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.testimoni-star-list{
-    padding: 0;
-}
-.testimoni-star-list .testimoni-star-item{
-    width: 15px;
-    height: 15px;
-    list-style: none;
-}
-#testimoni .container .testimoni-all .testimoni-list{
-    overflow-x: scroll;
-    padding: 10px;
-}
-#testimoni .container .testimoni-all .testimoni-list .testimoni-item{
-    list-style: none;
-    min-width: 318px;
-    height: 122px;
+.testimoni-list{
+    margin-top: 44px;
 }
 
-#testimoni .container .testimoni-all .testimoni-list .testimoni-item .testimoni-all-img{
+.testimoni-item{
+    list-style: none;
+    width: 273px;
+    height: 263px;
+    min-height: 270px;
+    border-radius: 5px;
+}
+
+.testimoni-item img{
     width: 80px;
     height: 80px;
+    margin-top: 18px;
+    object-fit: cover;
+}
+.testimoni-item h3{
+    margin-top: 13px;
+    margin-bottom: 0;
 
+}
+
+.testimoni-item article{
+    padding: 0 23px;
+    font-weight: 200;
+}
+
+.testimoni-item-center{
+    width: 342px !important;
+    height: 326px;
+}
+
+.testimoni-star li{
+    list-style: none;
+    margin: 0 3px 0 3px;
+    font-size: 24px;
+    font-weight: bold;
 }
 /* End Testimoni - testimoni */
 
@@ -434,6 +490,7 @@
 
 #daftarProduk .container .dapro-list .dapro-item .dapro-item-desc .dapro-item-title{
     background-color: var(--primary);
+
 }
 
 #daftarProduk .container .dapro-list .dapro-item .dapro-item-desc{
@@ -441,13 +498,16 @@
     border-radius: 7px;
     z-index: 4;
     min-height: 93px;
-
+    opacity: 0.72;
+    background-color: var(--primary);
+    padding: 34px 0;
 }
 
 #daftarProduk .container .dapro-list .dapro-item .dapro-item-img{
     width: 100%;
     height: 100%;
     border-radius: 7px;
+    object-fit: cover;
 }
 /* End Daftar Produk - dapro */
 
@@ -476,8 +536,8 @@
 }
 
 .footer-logo{
-    width: 225px;
-    height: 225px;
+    width: 180px;
+    height: 180px;
 }
 @media only screen and (max-width: 767.98px) {
 
@@ -522,18 +582,26 @@
 
     /* Navbar */
     .navbar {
+        padding: 10px;
         background-color: var(--white) !important;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-
+    .navbar .container{
+        padding: 15px;
+    }
     .navbar-nav {
         padding: 10px 11px;
     }
-    .navbar-nav li:hover{
-        background-color: var(--secondary-two);
-        
+    .navbar-nav .nav-item{
+        margin: 20px 0 0 auto !important;
     }
+
+    .navbar-title{
+        margin: auto 0 !important;
+    }
+
+    
     /* Header */
     .header-bg {
         height: auto;
@@ -617,11 +685,24 @@
         padding: 0 2px;
         width: 100%;
     }
+
+    .keha-item{
+        min-height: auto !important;
+    }
     /* End Kenapa Harus Beli Kepada Kami - keha */
 
 
     /* Testimoni - testimoni */
+    .testimoni-list{
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
 
+    .testimoni-item{
+        min-width: 400px;
+        height: 300px;
+        margin: 0 30px !important;
+    }
     /* End Testimoni - testimoni */
 
 
@@ -659,14 +740,21 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-
+    .navbar .container{
+        padding: 15px;
+    }
     .navbar-nav {
         padding: 10px 11px;
     }
-    .navbar-nav li:hover{
-        background-color: var(--secondary-two);
-        
+    
+    .navbar-nav .nav-item{
+        margin: 20px 0 0 auto !important;
     }
+
+    .navbar-title{
+        margin: auto 0 !important;
+    }
+
     /* Header */
     .header-bg {
         height: auto;
@@ -725,12 +813,23 @@
         height: auto !important;
     }
 
-
+    .keha-item{
+        min-height: auto !important;
+    }
     /* End Kenapa Harus Beli Kepada Kami - keha */
 
 
     /* Testimoni - testimoni */
+    .testimoni-list{
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
 
+    .testimoni-item{
+        min-width: 400px;
+        height: 300px;
+        margin: 0 30px !important;
+    }
     /* End Testimoni - testimoni */
 
 
@@ -752,13 +851,23 @@
 
 
     /* Navbar */
+    
+    .navbar .container{
+        padding: 15px;
+    }
+    
     .navbar-nav {
         padding: 10px 11px;
     }
-    .navbar-nav li:hover{
-        background-color: var(--secondary-two);
-        
+
+    .navbar-nav .nav-item{
+        margin: 20px 0 0 auto !important;
     }
+
+    .navbar-title{
+        margin: auto 0 !important;
+    }
+
 
     /* Header */
     .header-title .container{
@@ -822,8 +931,9 @@
         height: auto !important;
     }
 
-    .keha-list .keha-item{
-        margin: 35px 0px !important;
+
+    .keha-item{
+        min-height: auto !important;
     }
     /* End Kenapa Harus Beli Kepada Kami - keha */
 
